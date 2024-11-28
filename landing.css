@@ -1,0 +1,102 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* height: 100dvh; */
+    /* background-color: orange; */
+    /* align-items: center;
+    justify-content: center; */
+   
+
+}
+/*Header part*/
+header{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 5%;
+    background-color: rgba(225, 236, 232, 0.4);
+    height: 40px;
+    align-items: center;
+}
+header h3{
+    color: rgb(229, 92, 13);
+    transition: all 0.7s ease-in;
+    cursor: pointer;
+    box-shadow:  1px 2px 2px orangered;
+}
+h3:hover{
+    font-size: 15px;
+    rotate: -20deg;
+    
+}
+ul{
+    display: flex;
+    gap: 7px;
+    list-style: none;
+    justify-content: space-between;
+    width: 300px;
+}
+ul li a{
+    text-decoration: none;
+    color: rgb(45, 40, 40);
+}
+/*section part*/
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/image/tree\ anime.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    height: 70vh;
+    padding: 10px;
+    width: 400px;
+} 
+.btn{
+    display: flex;
+    gap: 5px;
+}
+.btn a{
+    text-decoration: none;
+    width: fit-content;
+    color: white;
+    background-color: blue;
+    padding: 5px;
+    border-radius: 5px;
+}
+/*footer part*/
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(28, 26, 26);
+    color: white;
+    align-items: center;
+    padding: 5px;
+
+}
+footer .copy{
+    align-items: center;
+}
+footer .logo{
+    width: 100%;
+    gap: 10px;
+    font-size: 19px;
+    color: blue;
+    display: flex;
+    justify-content: center;
+}
+.logo i{
+    cursor: pointer;
+}
+footer ul li{
+    cursor: pointer;
+}

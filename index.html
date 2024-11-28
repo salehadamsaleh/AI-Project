@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <textarea id="netice" rows="10" cols="30"></textarea>
+    <div class="btn">
+        <button id="startButton">Start</button>
+        <button id="stopButton">Stop</button>
+        <button onclick="clearText()" id="reset">Reset</button>
+    </div>
+    
+    <script type="text/javascript">
+        var startButton = document.getElementById("startButton");
+        var stopButton = document.getElementById("stopButton");
+        var netice = document.getElementById("netice");
+
+        // Fallback for non-Chrome browsers
+        var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+        var recognition = new SpeechRecognition();
+
+        recognition.lang = window.navigator.language; // Set the language
+        recognition.interimResults = false; // Disable interim results for more accurate output
+        recognition.maxAlternatives = 1; // Set to 1 to avoid multiple possible transcriptions
+
+        // Start recognition
+        startButton.addEventListener('click', () => { 
+            recognition.start(); 
+        });
+        
+        // Stop recognition
+        stopButton.addEventListener('click', () => { 
+            recognition.stop(); 
+        });
+
+        // Append the final result to the textarea
+        recognition.addEventListener('result', (event) => {
+            const result = event.results[event.resultIndex][0].transcript;
+            netice.value += result + ' '; // Add the final recognized text to the textarea
+        });
+
+        // Automatically restart recognition if it stops due to silence
+        recognition.addEventListener('end', () => {
+            if (!stopPressed) { // Only restart if the stop button wasn't pressed
+                recognition.start();
+            }
+        });
+
+        // Keep track of whether the stop button was pressed
+        let stopPressed = false;
+        stopButton.addEventListener('click', () => {
+            stopPressed = true;
+            recognition.stop();
+        });
+
+        // Clear the textarea content
+        function clearText() {
+            netice.value = '';
+        }
+    </script>
+</body>
+</html>

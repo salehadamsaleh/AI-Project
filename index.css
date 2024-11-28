@@ -1,0 +1,161 @@
+/* #netice{
+    width: 600px;
+    height: 600px;
+    border-color:  blue;
+} */
+/*body style*/
+
+/*Header part*/
+
+header{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 5%;
+    background-color: rgba(83, 85, 84, 0.4);
+    height: 40px;
+    align-items: center;
+}
+header h3{
+    color: white;
+    transition: all 0.7s ease-in;
+    background-color: #8a81ea;
+    cursor: pointer;
+    box-shadow:  1px 3px 2px rgb(137, 158, 185);
+}
+h3:hover{
+    font-size: 15px;
+    rotate: 360deg;
+    
+}
+ul{
+    display: flex;
+    gap: 7px;
+    list-style: none;
+    justify-content: space-between;
+    width: 300px;
+}
+ul li a{
+    text-decoration: none;
+}
+/*section part*/
+.tegen{
+    height: 70dvh;
+    background-color: white;
+    /* align-items: center;
+    justify-content: center; */
+    /* background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/image/960x0.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    
+}
+ .sas{
+    height: 70dvh;
+    background-color: white;
+    /* align-items: center;
+    justify-content: center; */
+    /* background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/image/animirovannyi-fon-11.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+} 
+/*textarea style part*/
+.text,.speech{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 5px;
+   
+}
+.text #text,.speech #netice{
+    width: 650px;
+    height: 300px;
+    font-size: 19px;
+    font-weight: bold;
+    /* border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: rgb(46, 42, 42);
+    padding: 5px;
+    color: white; */
+
+    background-color: #b8ccd4; /* Pure white for readability */
+    border: 2px solid #cccccc; /* Subtle border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px;
+    font-size: 16px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    resize: none;
+}
+/* #text:hover{
+    background:  rgb(36, 37, 37);
+    color: white;
+    cursor: pointer;
+}
+#netice:hover{
+    background:  rgb(26, 26, 27);
+    color: white;
+    cursor: pointer;
+} */
+
+  /* Textarea hover and focus effects */
+  #text:focus {
+    outline: none; /* Remove default outline */
+    border-color: #3399ff; /* Highlight border on focus */
+    box-shadow: 0px 0px 10px rgba(51, 153, 255, 0.5); /* Glow effect */
+}
+#netice:focus {
+    outline: none; /* Remove default outline */
+    border-color: #3399ff; /* Highlight border on focus */
+    box-shadow: 0px 0px 10px rgba(51, 153, 255, 0.5); /* Glow effect */
+}
+.btn1,.btn2{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+button{
+    background : rgb(77, 77, 173);
+    width: 100px;
+    color: white;
+    border: none;
+    padding: 7px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.6s ease-in;
+}
+button:hover{
+    background-color: blue;
+    transform: scale(1.1);
+}
+/*footer part*/
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(42, 43, 43);
+    color: white;
+    align-items: center;
+    padding: 5px;
+    
+}
+footer .copy{
+    align-items: center;
+}
+footer .logo{
+    width: 100%;
+    gap: 10px;
+    font-size: 19px;
+    color: blue;
+    display: flex;
+    justify-content: center;
+}
+.logo i{
+    cursor: pointer;
+}
+footer ul li{
+    cursor: pointer;
+}
+
+
